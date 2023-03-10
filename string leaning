@@ -1,0 +1,194 @@
+/*
+ * In  java Static is a  key word  that use for memory management mainly;
+ * Static means single  copy storage for variyables or methods;
+ * static keyword  java can be applied with 
+ *       * variyable(class leval)-not logal variyable;
+ *       *method;
+ *       *block
+ *       *inner class(nester class)-not outer class;
+ *       
+ * can be called without  the help of an object;
+ * can be called with the help of an object;
+ * can be called with class name;      
+
+ */
+ 
+ 
+public class StaticDemo {
+	static  int counter=0;
+	 
+ void display() {
+		counter+=1;
+		System.out.println(counter);
+	}
+
+	public static void main(String[] args) {
+		
+		StaticDemo obj1=new StaticDemo();
+		StaticDemo obj2=new StaticDemo();
+		StaticDemo obj3=new StaticDemo();
+		obj1.	display();
+		obj2.display();
+		obj3.display();
+		
+		//static using commen memory; instance usinge  intisuval memory
+		//static method call first;
+		//non static variyable not work static method ex int a=10;
+	}
+
+}
+   
+  
+  
+  
+  
+  package plagrount;
+/*
+ * show()           display()        result
+ * 
+ * Non static        Non static          work
+ * Static           Non static          work
+ * static            static            work
+ * non static          static          not work
+ 
+ * 
+ */
+class Demo{
+ 
+	void show() {
+		System.out.println("Hii");
+	}
+		void display() {
+		show();
+	}
+     
+}
+public  class StaticMethod {
+
+	 public static void main(String[]args) {
+	 Demo obj1=new Demo();
+	 obj1. display();
+	 }
+ }
+ 
+ 
+ 
+ 
+ 
+ package plagrount;
+
+public  class ClassDemo {
+
+	 void show() {
+		System.out.println("Hii");
+	}
+	
+static	class InnerClass{
+		
+	
+		void display() {
+	System.out.println("hello");
+	}
+     
+	}
+	public static void main(String[] args) {
+		ClassDemo x=new ClassDemo();
+		x.show();
+		
+		ClassDemo.InnerClass y=new ClassDemo.InnerClass();
+		 y.display();
+		
+		//ClassDemo.InnerClass.display();
+		//InnerClass.display();
+	}
+
+}
+
+
+
+/*
+        Method                              Block
+       
+        *{}                               *{}
+        
+       * set of instruction              *set of instruction (small set ex:loop)              
+      *  method name                       *not name
+      *  return type                       * not return type
+  
+  Exticute:
+  * static block
+  * main method
+  * non static block(obj)
+  * constroctor
+  * 
+  * 
+*/
+public class BlockMethod {
+	public BlockMethod () {
+	System.out.println("constroctor");
+	}
+	{
+		System.out.println("Non static Block");
+	}
+	static {
+	System.out.println("static block");
+	}
+
+
+	public static void main(String[] args) {
+		
+		System.out.println("Main method");
+		BlockMethod obj=new BlockMethod();
+
+	}
+	
+
+}
+
+
+
+public class School {
+	int sudId;
+	String stdname;
+	 static String school = "zoho";
+	School(int schoolId,String stdname){
+		this.sudId =schoolId;
+		this.stdname =stdname;
+		
+	}
+	void display() {
+		System.out.println(sudId+" "+stdname+" "+school);
+	}
+
+	public static void main(String[] args) {
+		School st= new School( 101,"sumi");
+		School st2= new School( 102,"magi");
+		st.display();
+		st2.display();
+
+	}
+
+}
+
+
+
+
+
+public class StaticMathodandStaticBlock {
+	
+		 static int counter=0;
+	static void display() {
+			counter+=1;
+			System.out.println(counter);
+		}
+	static {
+		System.out.println("static block");
+	}
+
+	public static void main(String[] args) {
+		System.out.println("main");
+	
+		display();
+		
+}
+}
