@@ -1,0 +1,121 @@
+ Method Example;
+                            
+                            
+                            
+                            
+                            
+
+abstract class mobile1{
+	
+	abstract void camera();
+	abstract void display();
+}
+
+class Samsung extends mobile1{
+
+@Override
+void camera() {
+System.out.println("16 mega pichel camera");	
+}
+
+@Override
+void display() {
+System.out.println("5.5 inch display");	
+}
+}
+class nockiya extends mobile1{
+
+	@Override
+	void camera() {
+		System.out.println("9 mega pichel camera");	
+
+	}
+
+	@Override
+	void display() {
+		System.out.println("5 inch display");	
+		
+	}
+	void fingerpriend() {
+		System.out.println("fast frenger prints");	
+		
+	}
+
+	
+}
+public class Abstraction_class {
+
+	public static void main(String[] args) {
+		Samsung m=new Samsung();
+		m.camera();
+		m.display();
+		System.out.println(".................................");
+	nockiya n =new nockiya();
+		n.camera();
+		n.display();
+		n.fingerpriend();
+	
+	}
+
+}
+
+                                         Abstract Method In Example;
+                                         
+                                         
+                                         
+                                         
+                                         
+
+
+class Showroom{      //class is great in showroom
+	void display( car c) { // paramrter pass pnnanum
+		c.autostart();
+		c.autostop();
+	}
+}
+abstract class car{   //so method is abstract   //parent class
+	public abstract void autostart();   //method is abstract the class must be abstract
+	public abstract void autostop();
+}
+class Audi extends car{   // extends  child class
+
+	@Override
+	public void autostart() {    //overriding the method
+System.out.println("inside Audi_Auostart");		
+	}
+
+	@Override
+	public void autostop() {
+		System.out.println("inside Audi_Auostart");		
+
+	}
+	
+}
+class Bmw extends car{  ///  extent  child class 
+
+	@Override
+	public void autostart() {
+		System.out.println("inside Bmw_Auostart");		
+
+	}
+
+	@Override
+	public void autostop() {
+		System.out.println("inside Bmw_Auostart");		
+
+	}
+	
+}
+public class Abstraction_Program {
+
+	public static void main(String[] args) {
+    Showroom s=new Showroom();  //object is great the method
+  //  s.display(new Audi());  // Audi class ku object great panren with help of new key word
+                                 // in pass the paramiter of car css
+    
+    s.display(new Bmw());  // ,,   ,,  ,,
+	}
+
+} 
+
+
